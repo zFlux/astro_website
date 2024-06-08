@@ -1,0 +1,81 @@
+---
+import { DANIEL } from '../consts';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<html>
+<head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+
+        .title-header {
+       
+            background-color: rgba(209, 215, 221, 0.646);
+        }
+        .container {
+            padding-top: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+   
+        thead th { 
+            position: sticky; 
+            top: 0; z-index: 1; 
+        }
+
+        table  { 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-collapse: collapse; 
+        }
+
+        th,td { 
+            padding: 8px 16px; 
+            border: 1px solid #ddd;
+        }
+
+        .prose {
+				width: 720px;
+				max-width: calc(100% - 2em);
+				margin: auto;
+				color: rgb(var(--gray-dark));
+		}
+        .title {
+
+				padding: .4em 0;
+				text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <Header />
+    <h1 class="title">
+       I Love Running.
+    </h1>
+    <div class="prose">
+        I started running in 2010 when a co-worker introduced me to the sport. I tried it out and found it greatly 
+        improved my mental health. The more I did it the more facets of the sport I found that I enjoyed. Since 2010 I 
+        have participated in so many wonderful races which I keep track of here.
+    </div>
+    <div class="container">
+        <table>
+            <tr class="title-header">
+                <th>Date</th>
+                <th>Race</th>
+                <th>km</th>
+                <th>Time</th>
+            </tr>
+            {DANIEL.races.map((race) => (
+                <tr>
+                    <td>{race.date}</td>
+                    <td>{race.race}</td>
+                    <td>{race.km}</td>
+                    <td>{race.time}</td>
+                </tr>
+            ))}
+        </table>
+    </div>
+</html>
