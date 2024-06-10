@@ -1,0 +1,26 @@
+@import '../styles/variables';
+  
+  .ResultList {
+    .ItemTextbox {
+      color: rgb(0, 0, 0);
+    }
+  }
+
+  .ResultListTitle {
+    height: 10px;
+    width: 200px;
+    margin-left: auto;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  .ResultListTitleSubtext {
+    height: 50px;
+    width: 190px;
+    margin-left: auto;
+    font-size: 16px;
+    font-weight: normal;
+    vertical-align: middle;
+    line-height: normal;
+    padding-top: 10px;
+  }

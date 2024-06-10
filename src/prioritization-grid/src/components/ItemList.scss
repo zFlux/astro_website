@@ -1,0 +1,27 @@
+@import '../styles/variables';
+
+
+  .ItemList {
+    .ItemTextbox {
+      color: rgb(0, 0, 0);
+    }
+  }
+
+  .ItemListTitle {
+    height: 10px;
+    width: 200px;
+    margin-left: auto;
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: auto;
+  }
+  
+  .ItemListTitleSubtext {
+    height: 50px;
+    width: 190px;
+    font-size: 16px;
+    font-weight: normal;
+    margin-left: auto;
+    line-height: normal;
+    padding-top: 10px;
+  }

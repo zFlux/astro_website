@@ -1,0 +1,17 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import PrioritizationGrid from '../prioritization-grid/src/components/PrioritizationGrid';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<html>
+<head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+</head>
+<body>
+    <Header />
+    <div class="container">
+        <PrioritizationGrid client:load/>
+    </div>
+</html>
