@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import ChoiceGrid from './ChoiceGrid';
 import { act } from 'react-dom/test-utils';
-import { HashTable } from '../utils/utils';
+import { type HashTable } from '../utils/utils';
 
 const mockChange = jest.fn();
 

@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react';
+import React, { type ChangeEvent } from 'react';
 import ItemList from './ItemList';
 import ResultList from './ResultList';
 import './ItemGrid.scss';
