@@ -1,0 +1,40 @@
+
+  .ChoiceGrid {
+    display: flex;
+    align-items: flex-end;
+    rotate: -45deg;
+    margin-top: 90px;
+    margin-left: -140px;
+    @media screen and (max-width: 768px){
+      margin-left: -180px;
+    }
+  }
+
+  .ChoiceGridColumn {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ChoiceGridTitle {
+    align-items: flex-start;
+    font-size: 22px;
+    font-weight: bold;
+    writing-mode: vertical-lr;
+    height: 350px;
+  }
+
+  .ChoiceBox {
+    rotate: 90deg;
+  }
+
+  .Choice {
+    transform: rotate(-45deg);
+  }
+
+  .ChoiceDisabled {
+    transform: rotate(-45deg);
+  }
+
+  .ChoiceSelected {
+    transform: rotate(-45deg);
+  }

@@ -1,0 +1,56 @@
+@import '../styles/variables.scss';
+
+.ResultGrid {
+
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 286px;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 90px;
+    padding-right: 0px;
+  }
+
+  &Title {
+    font-size: 22px;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+    rotate: 180deg;
+  }
+
+  &ItemNumber, &Selected, &Ranked {
+    display: flex;
+  }
+
+  .ResultGridCell, .ResultGridCellTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 45px;
+    @media screen and (max-width: 768px) {
+      width: 32px;
+      height: 35px;
+    }
+    border: 2px solid black;
+    margin-top: -2px;
+    margin-right: -2px;
+  }
+
+  .ResultGridCellTitle {
+    font-weight: bolder;
+  }
+}
+
+.ResultGridRowTitle {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.TitleEmphasis {
+  color: red;
+  font-weight: bold;
+}
