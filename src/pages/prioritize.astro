@@ -9,9 +9,68 @@ import Footer from '../components/Footer.astro';
 <html>
 <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+
+        .title-header {
+       
+            background-color: rgba(209, 215, 221, 0.646);
+        }
+        .container {
+            padding-top: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+   
+        thead th { 
+            position: sticky; 
+            top: 0; z-index: 1; 
+        }
+
+        table  { 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-collapse: collapse; 
+            padding-bottom: 60px;
+        }
+
+        th,td { 
+            padding: 8px 16px; 
+            border: 1px solid #ddd;
+        }
+
+        .prose {
+				width: 720px;
+				max-width: calc(100% - 2em);
+				margin: auto;
+				color: rgb(var(--gray-dark));
+                padding: .4em 0;
+		}
+        .title {
+
+				padding: .2em 0;
+				text-align: center;
+        }
+
+        p {
+            margin: 1em 0;
+        }
+    </style>
 </head>
 <body>
     <Header />
+     <div class="prose">
+        <h1 class="title">Prioritization Grid</h1>
+        
+        <p>Have you ever had a list of options and no clear way to rank order them? If yes, this prioritization grid is here to help!</p>
+
+        <ul>
+            <li>First, list items to be prioritized in the ‘Unprioritized’ column on the left.</li>
+            
+            <li>Next, compare each item using the grid on the far right. Each box has two numbers in it. All you do is click which of the two numbers you like more. Do this for every available box in the grid on the far right of the page.</li>
+            
+            <li>The ‘Prioritized’ column will automatically update with the items in rank order.</li>
+        </ul>
+     </div>
     <div class="container">
         <PrioritizationGrid client:load/>
     </div>

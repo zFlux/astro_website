@@ -176,16 +176,6 @@ export default class PrioritizationGrid extends React.Component<PrioritizationGr
     render() {
         return (
             <div className='PrioritizationGrid' data-testid='prioritization-grid-id'>
-                <div className='PrioritizationGridHeader'>
-                    <div className='ImportExportButtons'>
-                        <label className='ImportButton' htmlFor="inputTag">
-                            Load From File
-                            <input id="inputTag" type="file" accept=".json" onChange={this.handleFileInputChange} />
-                        </label>
-                        <button className='ExportButton' onClick={() => this.exportJsonData(this.state.listOfItems, this.state.choiceGrid, this.state.largestEditedItemIndex, this.state.prioritiesTitle)}>Export to File</button>
-                    </div>
-                </div>
-                <textarea ref={this.focusRef} className='PrioritiesTitle' autoFocus onChange={this.handlePrioritiesTitleChange} value={this.state.prioritiesTitle} placeholder='What do you want to prioritize today?'/>
                 <div className='ItemGridAndChoiceGridContainer'>
                     <ItemGrid itemList={this.state.listOfItems} largestEditedItemIndex={this.state.largestEditedItemIndex} resultList={this.state.listOfResultItems} onChange={this.itemListChange} />
                     <ChoiceGrid gridSize={10} choiceGridData={this.state.choiceGrid} largestEditedItemIndex={this.state.largestEditedItemIndex} onChange={this.choiceGridChange} />
