@@ -22,16 +22,12 @@
     width: 19.4px;
     padding-left: 5px;
     padding-right: 2px;
-    @media screen and (max-width: 768px) {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
 }
 
 .ItemTextbox { 
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+    text-align: left;
     font-size: 16px;
     resize: none;
     border-left: 0px solid black;

@@ -7,21 +7,17 @@
     }
   }
 
-  .ItemListTitle {
-    height: 10px;
+  .ItemListHeader {
+    height: 90px;
     width: 200px;
-    margin-left: auto;
+  }
+
+  .ItemListTitle {
     font-size: 22px;
     font-weight: bold;
-    margin-left: auto;
   }
   
   .ItemListTitleSubtext {
-    height: 50px;
-    width: 190px;
     font-size: 16px;
-    font-weight: normal;
-    margin-left: auto;
     line-height: normal;
-    padding-top: 10px;
   }

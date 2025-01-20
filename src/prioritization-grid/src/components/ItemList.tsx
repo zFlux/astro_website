@@ -29,12 +29,12 @@ export default class ItemList extends React.Component<ItemListProps> {
             itemFields.push(<ItemField className={className} key={"item_" + i} itemID={i} onChange={this.props.onChange} onKeyDown={handleKeyDown} value={this.props.itemList[i]}/>);
         }
         return (
-            <div>
-                <form className='ItemList'>
-                <h3 className='ItemListTitle'>Unprioritized</h3>
-                <div className='ItemListTitleSubtext'>Before prioritizing - enter items in any order</div>
-                    {itemFields}
-                </form>
+            <div className='ItemList'>
+                <div className='ItemListHeader'>
+                    <h3 className='ItemListTitle'>Unprioritized</h3>
+                    <div className='ItemListTitleSubtext'>Before prioritizing - enter items in any order</div>
+                </div>
+                {itemFields}
             </div>
         );
     }
