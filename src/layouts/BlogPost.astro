@@ -15,7 +15,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
-		<style>
+		<style is:global>
 			main {
 				width: calc(100% - 2em);
 				max-width: 100%;
@@ -59,6 +59,37 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				border: none;
 				border-top: 1px solid rgb(var(--gray-light));
 				margin: 1em 0;
+			}
+			/* About Me page image layout */
+			.prose .about-me-container {
+				display: flex !important;
+				flex-direction: row !important;
+				align-items: flex-start !important;
+				gap: 1.5em !important;
+				margin-bottom: 1.5em !important;
+			}
+			.about-me-image {
+				width: 200px;
+				height: 200px;
+				border-radius: 12px;
+				box-shadow: var(--box-shadow);
+				flex-shrink: 0;
+			}
+			.about-me-text {
+				flex: 1;
+			}
+			/* Responsive image layout for About Me page */
+			@media (max-width: 600px) {
+				.prose .about-me-container {
+					flex-direction: column !important;
+					align-items: center !important;
+				}
+				.prose .about-me-image {
+					width: 100% !important;
+					height: auto !important;
+					margin-bottom: 1em !important;
+					max-width: 300px;
+				}
 			}
 		</style>
 	</head>
