@@ -9,10 +9,14 @@
     "preview": "astro preview",
     "astro": "astro"
   },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
   "dependencies": {
-    "@astrojs/check": "^0.7.0",
-    "@astrojs/mdx": "^3.0.1",
-    "@astrojs/react": "^3.5.0",
+    "@astrojs/check": "^0.9.6",
+    "@astrojs/mdx": "^4.3.13",
+    "@astrojs/react": "^4.4.2",
     "@astrojs/rss": "^4.0.6",
     "@astrojs/sitemap": "^3.1.5",
     "@testing-library/jest-dom": "^6.4.5",
@@ -20,7 +24,7 @@
     "@types/jest": "^29.5.12",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "astro": "^4.9.2",
+    "astro": "^5.18.0",
     "prioritization-grid": "github:zFlux/prioritization-grid",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
