@@ -1,15 +1,21 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
-import PrioritizationGrid from '../prioritization-grid/src/components/PrioritizationGrid';
+import PrioritizationGrid from 'prioritization-grid/src/components/PrioritizationGrid';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import Footer from '../components/Footer.astro';
+// Import component styles directly to ensure they're loaded
+import 'prioritization-grid/src/components/PrioritizationGrid.scss';
+import 'prioritization-grid/src/components/ItemList.scss';
+import 'prioritization-grid/src/components/ResultList.scss';
+import 'prioritization-grid/src/components/ChoiceGrid.scss';
+import 'prioritization-grid/src/components/ResultGrid.scss';
 ---
 
 <html>
 <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <style>
+    <style is:global>
 
         .title-header {
        
@@ -53,6 +59,96 @@ import Footer from '../components/Footer.astro';
 
         p {
             margin: 1em 0;
+        }
+
+        /* Override global styles to match production - ensure component styles take precedence */
+        .PrioritizationGrid {
+            font-family: Arial, Helvetica, sans-serif !important;
+        }
+
+        /* Remove any spacing from parent containers */
+        .PrioritizationGrid .ItemList,
+        .PrioritizationGrid .ResultList {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .PrioritizationGrid .ItemList form,
+        .PrioritizationGrid .ResultList {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        /* Override global h3 styles for prioritization grid headings - remove all margins to match production */
+        .PrioritizationGrid h3.ItemListTitle,
+        .PrioritizationGrid h3.ResultListTitle {
+            font-size: 22px !important;
+            font-weight: bold !important;
+            margin: 0 !important;
+            margin-top: 0 !important;
+            margin-right: 0 !important;
+            margin-bottom: 4px !important;
+            margin-left: auto !important;
+            padding: 0 !important;
+            line-height: 1.2 !important;
+            color: rgb(var(--black)) !important;
+            font-family: Arial, Helvetica, sans-serif !important;
+            height: auto !important;
+            min-height: 10px !important;
+            width: 200px !important;
+            overflow: visible !important;
+        }
+        
+        .PrioritizationGrid .ChoiceGridTitle,
+        .PrioritizationGrid .ResultGridTitle {
+            font-size: 22px !important;
+            font-weight: bold !important;
+            font-family: Arial, Helvetica, sans-serif !important;
+        }
+
+        /* Style subtext elements - ensure no extra spacing */
+        .PrioritizationGrid .ItemListTitleSubtext,
+        .PrioritizationGrid .ResultListTitleSubtext {
+            font-size: 16px !important;
+            font-weight: normal !important;
+            font-family: Arial, Helvetica, sans-serif !important;
+            color: rgb(var(--gray-dark)) !important;
+            margin: 0 !important;
+            margin-top: 0 !important;
+            margin-right: 0 !important;
+            margin-bottom: 0 !important;
+            margin-left: auto !important;
+            padding: 0 !important;
+            line-height: 1.2 !important;
+            height: auto !important;
+            min-height: 50px !important;
+            width: 190px !important;
+            display: block !important;
+        }
+
+        .PrioritizationGrid .ResultListTitleSubtext {
+            vertical-align: middle !important;
+        }
+
+        /* Fix number alignment within choice circles - use flexbox for proper centering */
+        .PrioritizationGrid .Choice,
+        .PrioritizationGrid .ChoiceSelected,
+        .PrioritizationGrid .ChoiceDisabled {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            line-height: 1 !important;
+            box-sizing: border-box !important;
+        }
+
+        /* Add transparent border to unselected choices so they match selected size (prevents number shift) */
+        .PrioritizationGrid .Choice {
+            border: 1.5px solid transparent !important;
+        }
+
+        /* Ensure selected border matches exactly */
+        .PrioritizationGrid .ChoiceSelected {
+            border: 1.5px solid rgb(255, 0, 0) !important;
         }
     </style>
 </head>
