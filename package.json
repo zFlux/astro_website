@@ -17,14 +17,15 @@
     "@astrojs/sitemap": "^3.1.5",
     "@testing-library/jest-dom": "^6.4.5",
     "@testing-library/react": "^16.0.0",
+    "@types/jest": "^29.5.12",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "astro": "^4.9.2",
+    "prioritization-grid": "github:zFlux/prioritization-grid",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sass": "^1.77.4",
     "typescript": "^5.4.5",
-    "web-vitals": "^4.1.0",
-    "@types/jest": "^29.5.12"
+    "web-vitals": "^4.1.0"
   }
 }
