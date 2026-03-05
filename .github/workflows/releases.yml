@@ -10,9 +10,15 @@ jobs:
   pre-release:
     name: "Prepare Release"
     runs-on: "ubuntu-latest"
+    permissions:
+      contents: write  # Required to create releases and tags
 
     steps:
-      - uses: "marvinpinto/action-automatic-releases@latest"
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create automatic release
+        uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest"
