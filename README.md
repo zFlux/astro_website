@@ -189,19 +189,6 @@ In your Cloudflare Pages project settings, configure:
 - **Root directory:** `/` (root of repository)
 - **Node version:** 20.5.1 (or use `.nvmrc` file)
 
-#### Troubleshooting Rollup Optional Dependencies
-
-If you encounter errors about `@rollup/rollup-linux-x64-gnu` not being found:
-
-1. **Ensure package-lock.json is committed** - The lockfile ensures consistent dependency resolution
-2. **Use Node 20+** - The `.nvmrc` file specifies Node 20.5.1
-3. **Verify npm version** - Cloudflare Pages should use npm 9+ (specified in `package.json` engines)
-
-If issues persist, you may need to configure Cloudflare Pages to use `npm ci` instead of `npm install` by setting the build command to:
-```bash
-npm ci && npm run build
-```
-
 ### Build Process
 
 ```bash
