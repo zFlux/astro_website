@@ -28,7 +28,7 @@
     "prioritization-grid": "github:zFlux/prioritization-grid",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "sass": "^1.77.4",
+    "sass": "^1.98.0",
     "typescript": "^5.4.5",
     "web-vitals": "^5.1.0"
   }
