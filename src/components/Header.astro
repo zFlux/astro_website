@@ -10,6 +10,7 @@ import { SITE_TITLE } from '../consts';
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog/simplicity-complexity/">Blog</HeaderLink>
 			<HeaderLink href="/running">Running</HeaderLink>
+			<HeaderLink href="/prioritize/10/">Prioritize</HeaderLink>
 		</div>
 		<div class="social-links">
 			<a href="https://ca.linkedin.com/pub/daniel-christo/27/ab0/a54/" target="_blank">
@@ -72,6 +73,25 @@ import { SITE_TITLE } from '../consts';
 	@media (max-width: 720px) {
 		.social-links {
 			display: none;
+		}
+		/* The name and four tabs don't fit on one line on phones: put the name
+		   on its own row and centre the tabs underneath. */
+		nav {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		h2 {
+			width: 100%;
+			padding-top: 0.6em;
+			text-align: center;
+		}
+		.internal-links {
+			display: flex;
+			justify-content: center;
+			gap: 0.9em;
+		}
+		nav .internal-links a {
+			padding: 0.5em 0.1em 0.6em;
 		}
 	}
 </style>
